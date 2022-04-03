@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&family=Balsamiq+Sans&family=Mystery+Quest&family=Nova+Square&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: rgba(26, 26, 26);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 500%;
+    font-family: 'Nova Square', cursive;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+
+}
+
+.a {
+    position: absolute;
+    top: 50%;
+}
+
+.a a {
+    color: white;
+}
+
+#a1 {
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    margin: 10px 0;
+    font-family: 'Nova Square', cursive;
+    font-size: 28px;
+
+}
+
+#a2 {
+    background-color: rgb(226, 223, 43);
+    border: 2px solid rgb(226, 223, 43);
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    margin: 10px 0;
+    font-family: 'Nova Square', cursive;
+    font-size: 28px;
+
+}
+
+.fa-crown {
+    font-size: 40px;
+    margin-left: -15px;
+    color: white;
+}
+
+/* End page CSS */
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+}
+input {
+    margin-botton: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+}
+
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: rgb(28, 26, 26);
+}
