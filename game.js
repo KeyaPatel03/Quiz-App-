@@ -5,42 +5,42 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = {}
-let acceptingAnswers = truelet 
-score = 0
+let acceptingAnswers = true ;
+let score = 0;
 let questionCounter = 0
 let availableQuestions =  []
 
 let questions = [
     {
         question: "What is 2+2*3?",
-        choice1: '12',
-        choice2: '6',
-        choice3: '10',
-        choice4: '8',
+        choice1: "12",
+        choice2: "6",
+        choice3: "10",
+        choice4: "8",
         answer: 8,
     },
     {
         question: "What is 2+2?",
-        choice1: '4',
-        choice2: '6',
-        choice3: '10',
-        choice4: '8',
+        choice1: "4",
+        choice2: "6",
+        choice3: "10",
+        choice4: "8",
         answer: 4,
     },
     {
         question: "What is 2*3?",
-        choice1: '5',
-        choice2: '6',
-        choice3: '1',
-        choice4: '8',
+        choice1: "5",
+        choice2: "6",
+        choice3: "1",
+        choice4: "8",
         answer: 6,
     },
     {
         question: "What is 2+2*3+2?",
-        choice1: '14',
-        choice2: '15',
-        choice3: '10',
-        choice4: '8',
+        choice1: "14",
+        choice2: "15",
+        choice3: "10",
+        choice4: "8",
         answer: 10,
     }
 ]
@@ -49,10 +49,10 @@ const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
 startGame = () => {
-    questionCpunter = 0
-    scroe = 0
-    availableQuestions = [...questions]
-    getNewQuestion()
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion();
 }
 
 getNewQuestion = () => {
@@ -61,29 +61,29 @@ getNewQuestion = () => {
         return window.location.assign('/end.html')
     }
     questionCounter++
-    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
-    progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
 
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex]
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    currentQuestion = availableQuestions[questionsIndex];
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
         const number = choice.dataset['number']
-        choice,innerText = currentQuestion['choice' + number]
+        choice.innerText = currentQuestion['choice' + number]
     })
-    availableQuestions.splice(questionIndex, 1)
+    availableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
 }
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return
+        if(acceptingAnswers!=true) return
 
         acceptingAnswers = false
         const selectedChoice = e.target
-        const selectAnswers = selectedChoice.dataset['number']
+        const selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
         'incorrect'
@@ -100,7 +100,7 @@ choices.forEach(choice => {
     })
 })
 incrementScore = num => {
-    score += num
+    score = score + num
     scoreText.innerText = score
 }
 
