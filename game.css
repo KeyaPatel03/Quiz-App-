@@ -14,7 +14,7 @@ body {
 
 .choice-container:hover  {
     cursor: pointer;
-    box-shadow: 0 04rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -48,6 +48,10 @@ body {
     font-size: 2rem;
 }
 
+.hub-main-text {
+    text-align: center;
+}
+
 #progressBar {
     width: 20rem;
     height: 3rem;
@@ -68,4 +72,3 @@ body {
         min-width: 40rem;
     }
 }
-
